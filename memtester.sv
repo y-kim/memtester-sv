@@ -20,8 +20,8 @@
 class memtester #(
   parameter wordsize = 8,
   parameter addrwidth = 48,
-  parameter ffwd = 0 // if 0 > then fast forward. number of iteration in outer-loops will be decreased.
-                     // it can be used to accelerate simulation speed because RTL simulation is too slave to test everything.
+  parameter ffwd = 0 // when 0 > ffwd, then fast forward is enabled. Number of iteration in outer-loops will be decreased.
+                     // It can be used to accelerate simulation speed because RTL simulation is too slow to test everything.
 );
   localparam UL_LEN = wordsize*8;
 
